@@ -50,7 +50,7 @@ import AppArticleText from '../components/AppArticleText';
 
 
 export default {
-  name: 'about',
+  name: 'About',
 
   components: {
     AppArticleText,

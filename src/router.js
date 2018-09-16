@@ -22,6 +22,15 @@ export default new Router({
       name: 'contact',
       component: () => import('./views/Contact.vue'),
     },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./views/Contact.vue'),
+    },
+    {
+      path: '*',
+      component: () => import('./views/NotFound.vue'),
+    },
   ],
   mode: 'history',
 });

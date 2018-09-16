@@ -55,7 +55,7 @@ import AppArticleText from '../components/AppArticleText';
 
 
 export default {
-  name: 'home',
+  name: 'Home',
 
   components: {
     AppCarousel,
