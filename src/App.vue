@@ -1,31 +1,45 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <base-layout>
+      <template slot="header">
+        <app-navigation></app-navigation>
+      </template>
+      <router-view/>
+      <app-whitespace></app-whitespace>
+    </base-layout>
   </div>
 </template>
 
+
+<script>
+import BaseLayout from './layouts/BaseLayout';
+import AppNavigation from './components/AppNavigation';
+import AppWhitespace from './components/AppWhitespace';
+
+
+export default {
+  components: {
+    BaseLayout,
+    AppNavigation,
+    AppWhitespace,
+  },
+};
+</script>
+
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+* {
+  box-sizing: border-box;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+*:focus {
+  outline: none !important;
 }
 </style>
