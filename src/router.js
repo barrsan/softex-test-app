@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home';
+import About from './views/About';
+import Contact from './views/Contact';
+import NotFound from './views/NotFound';
 
 
 Vue.use(Router);
 
 export default new Router({
+  base: process.env.environment === 'development' ? '/' : '/softex-test-app/',
   routes: [
     {
       path: '/',
@@ -15,21 +19,16 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: () => import('./views/About.vue'),
+      component: About,
     },
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('./views/Contact.vue'),
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('./views/Contact.vue'),
+      component: Contact,
     },
     {
       path: '*',
-      component: () => import('./views/NotFound.vue'),
+      component: NotFound,
     },
   ],
   mode: 'history',
