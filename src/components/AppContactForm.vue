@@ -255,6 +255,8 @@ export default {
   padding: 10px 12px;
   font-size: 1.1rem;
   border: 1px solid rgba(189, 190, 195, 1);
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 .contact-form__input_error {
